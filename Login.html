@@ -1,0 +1,77 @@
+<!-- ================= LOGIN PAGE ================= -->
+<!-- Save as login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#141e30,#243b55);
+  font-family:Arial;
+}
+.box{
+  background:#fff;
+  padding:40px;
+  border-radius:15px;
+  width:300px;
+  text-align:center;
+  animation:fade 1s ease;
+}
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+button{
+  width:100%;
+  padding:10px;
+  background:#243b55;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+a{display:block;margin-top:10px;color:#243b55;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Login</h2>
+<input type="text" id="user" placeholder="Username">
+<input type="password" id="pass" placeholder="Password">
+<button onclick="login()">Login</button>
+<a href="index.html">Create Account</a>
+</div>
+
+<script>
+function login(){
+  const u=document.getElementById('user').value;
+  const p=document.getElementById('pass').value;
+
+  if(u===localStorage.getItem('user') && p===localStorage.getItem('pass')){
+    window.location.href='Home.html';
+  }else{
+    alert('Invalid credentials');
+  }
+}
+</script>
+</body>
+</html>
+
+
+
+
+

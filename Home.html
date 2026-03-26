@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#11998e,#38ef7d);
+  font-family:Arial;
+  color:#fff;
+  text-align:center;
+}
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#fff;
+  color:#11998e;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+<div>
+<h1>Welcome 🎉</h1>
+<p>You are successfully logged in</p>
+<button onclick="logout()">Logout</button>
+</div>
+
+<script>
+function logout(){
+  window.location.href='login.html';
+}
+</script>
+</body>
+</html>
